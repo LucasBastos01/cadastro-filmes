@@ -1,0 +1,95 @@
+type: collection.insomnia.rest/5.0
+name: Cadastro de Filmes
+meta:
+  id: wrk_f7a08c1f78074bd7b1f3c890c0f693d3
+  created: 1790807508762
+  modified: 1790807508762
+collection:
+  - name: Filmes
+    meta:
+      id: fld_a50ef90f8a374366b9aa40e19176e4f5
+      created: 1790807520838
+      modified: 1790807520838
+      sortKey: -1790807520838
+    children:
+      - url: http://localhost:8080/filmes
+        name: Get List
+        meta:
+          id: req_37c7b9e5091a439dacac9e75127ad3ff
+          created: 1790807523217
+          modified: 1790807969799
+          isPrivate: false
+          sortKey: -1790807523217
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/filmes
+        name: Create
+        meta:
+          id: req_4b848e4be0a64144a8fb1d67380b0e93
+          created: 1790807525122
+          modified: 1790808682680
+          isPrivate: false
+          description: |-
+            {
+              "titulo": "Interestelar",
+              "genero": "Ficção Científica",
+              "anoLancamento": 2014
+            }
+
+            {
+              "titulo": "Titanic",
+              "genero": "Romance",
+              "anoLancamento": 1997
+            }
+
+            {
+              "titulo": "Vingadores: Ultimato",
+              "genero": "Ação",
+              "anoLancamento": 2019
+            }
+          sortKey: -1790807525123
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            { 
+            	"titulo": "Vingadores: Ultimato", 
+              "genero": "Ação", 
+              "anoLancamento": 2019 
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_018308311d5be10e7a6c1740e3ad9564a9be9daf
+    created: 1790807508772
+    modified: 1790807508772
+environments:
+  name: Base Environment
+  meta:
+    id: env_018308311d5be10e7a6c1740e3ad9564a9be9daf
+    created: 1790807508766
+    modified: 1790807508766
+    isPrivate: false
